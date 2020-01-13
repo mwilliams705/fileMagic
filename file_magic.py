@@ -64,10 +64,12 @@ class MyHandler(FileSystemEventHandler):
                 shutil.move(src, "/Users/michaelwilliams/Desktop/mw/packages")
     
             # if filetype is unknown, it will default to the 'others' directory
-            else:
+            elif file.suffix == '':
                 print('filetype currently unknown')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/others")
-
+                shutil.move(os.path.join(src,filename), os.path.join(src, "/Users/michaelwilliams/Desktop/mw/others"))
+            else:
+                print('file type not found')
+                exit()
 
 
 folder_to_track = "/Users/michaelwilliams/Desktop/mw"
