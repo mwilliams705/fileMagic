@@ -17,59 +17,9 @@ class MyHandler(FileSystemEventHandler):
             src = folder_to_track + "/" + filename
             new_destination = folder_destination + "/" + filename
             file = Path(filename)
-            #Move files based on extention
-            # Documents
-            if file.suffix == '.txt':
-                print('file is .txt file!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/documents")
-            elif file.suffix == '.docx':
-                print('file is an docx file!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/documents")
-            elif file.suffix == '.pdf':
-                print('file is an pdf file!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/documents")
-            # Spreadsheets
-            elif file.suffix == '.xls':
-                print('file is a spreadsheet!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/spreadsheets")
-            elif file.suffix == '.xlsx':
-                print('file is a spreadsheet!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/spreadsheets")
-            elif file.suffix == '.csv':
-                print('file is a spreadsheet!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/spreadsheets")
+            
 
-            # Images
-            elif file.suffix == '.png':
-                print('file is an image!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/images")
-            elif file.suffix == '.jpg':
-                print('file is an image!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/images")
-            elif file.suffix == '.jpeg':
-                print('file is an image!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/images")
-            # Movies
-            elif file.suffix == '.mp4':
-                print('file is an movie!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/movies")
-
-
-            # Packages
-            elif file.suffix == '.dmg':
-                print('file is an installation package!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/packages")
-            elif file.suffix == '.zip':
-                print('file is an compressed folder!')
-                shutil.move(src, "/Users/michaelwilliams/Desktop/mw/packages")
-    
-            # if filetype is unknown, it will default to the 'others' directory
-            elif file.suffix == '':
-                print('filetype currently unknown')
-                shutil.move(os.path.join(src,filename), os.path.join(src, "/Users/michaelwilliams/Desktop/mw/others"))
-            else:
-                print('file type not found')
-                exit()
+            
 
 
 folder_to_track = "/Users/michaelwilliams/Desktop/mw"
