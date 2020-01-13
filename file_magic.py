@@ -17,9 +17,6 @@ class MyHandler(FileSystemEventHandler):
             src = folder_to_track + "/" + filename
             new_destination = folder_destination + "/" + filename
             file = Path(filename)
-            
-
-            
 
 
 folder_to_track = "/Users/michaelwilliams/Desktop/mw"
