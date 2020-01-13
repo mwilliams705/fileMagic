@@ -4,24 +4,55 @@ from watchdog.events import FileSystemEventHandler
 import os
 import json
 import time
+import shutil
+from pathlib import Path
 
 class MyHandler(FileSystemEventHandler):
-    i = 1
+    
     def on_modified(self, event):
-        
-        #new_name = "new_file_" + str(self.i) + ".txt" #### change according to file type and name wanted ##############
-
         for filename in os.listdir(folder_to_track):
             
-            print("Moved to " + folder_destination)
-
-        
+            
             src = folder_to_track + "/" + filename
             new_destination = folder_destination + "/" + filename
-            os.rename(src, new_destination)
+            file = Path(filename)
+            #Move files based on extention
 
-folder_to_track = "/Users/tekreplay/Desktop/f1"
-folder_destination = "/Users/tekreplay/Desktop/f2"
+            if file.suffix == '.txt':
+                print('file is .txt!')
+                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/documents")
+            elif file.suffix == '.docx':
+                print('file is an image!')
+                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/documents")
+
+            # Images
+            elif file.suffix == '.png':
+                print('file is an image!')
+                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/images")
+            elif file.suffix == '.jpg':
+                print('file is an image!')
+                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/images")
+            elif file.suffix == '.jpeg':
+                print('file is an image!')
+                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/images")
+
+
+            # Packages
+            elif file.suffix == '.dmg':
+                print('file is an installation package!')
+                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/packages")
+            elif file.suffix == '.zip':
+                print('file is an compressed folder!')
+                shutil.move(src, "/Users/michaelwilliams/Desktop/michaelwilliams/packages")
+
+
+
+folder_to_track = "/Users/michaelwilliams/Downloads"
+folder_destination = "/Users/michaelwilliams/Desktop/f2"
+  
+
+
+
 event_handler = MyHandler()
 observer = Observer()
 observer.schedule(event_handler, folder_to_track, recursive=True)
