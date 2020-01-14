@@ -9,6 +9,7 @@ v = {editable = true,version = "*"}
 
 [packages]
 watchdog = "*"
+django = "*"
 
 [requires]
 python_version = "3.7"
