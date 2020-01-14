@@ -1,5 +1,7 @@
 import os
 import json
 
+print('init started')
 
-print(root)
+def start():
+    
