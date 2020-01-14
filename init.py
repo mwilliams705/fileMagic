@@ -6,6 +6,6 @@ print('init started')
 def start():
     print('version 0.0.1')
     print('web channel started')
-    os.system('ifconfig -all')
+    os.system('ifconfig -a')
 
 start()
