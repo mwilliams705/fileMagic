@@ -21,8 +21,6 @@ class MyHandler(FileSystemEventHandler):
 
 folder_to_track = "/Users/michaelwilliams/Desktop/mw"
 folder_destination = "/Users/michaelwilliams/Desktop/f2"
-  
-
 
 event_handler = MyHandler()
 observer = Observer()
