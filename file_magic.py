@@ -24,7 +24,6 @@ folder_destination = "/Users/michaelwilliams/Desktop/f2"
   
 
 
-
 event_handler = MyHandler()
 observer = Observer()
 observer.schedule(event_handler, folder_to_track, recursive=True)
