@@ -10,6 +10,7 @@ v = {editable = true,version = "*"}
 [packages]
 watchdog = "*"
 django = "*"
+pokepy = "*"
 
 [requires]
 python_version = "3.7"

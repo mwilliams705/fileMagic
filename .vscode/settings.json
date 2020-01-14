@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/Users/michaelwilliams/.local/share/virtualenvs/fmove-q70sPzO5/bin/python"
+    "python.pythonPath": "/Users/michaelwilliams/Desktop/fmove/.venv/bin/python3.7",
+    "git.ignoreLimitWarning": true
 }
